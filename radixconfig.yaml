@@ -8,6 +8,13 @@ spec:
       build:
         from: master
   components:
+    - name: client
+      src: ./client
+      ports:
+        - name: http
+          port: 5001
+      publicPort: http
+    
     - name: server
       src: "."
       ports:
