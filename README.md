@@ -1,4 +1,4 @@
-# Metis
+# Metis ![Metis testing](https://github.com/equinor/gathering-metis/workflows/Metis%20testing/badge.svg) ![Lint](https://github.com/equinor/gathering-metis/workflows/Lint/badge.svg) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 Metis is a [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) of people that can be navigated with a web browser. It lets you navigate through a structure of people, how they are organized, what they work with, their interests, and so on.
 
