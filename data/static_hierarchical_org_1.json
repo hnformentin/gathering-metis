@@ -1,0 +1,91 @@
+[
+    {
+        "id" : 1,
+        "node_type": "sector",
+        "display_text" : "SI",
+        "children": [
+            {
+                "id" : 2,
+                "node_type" : "department",
+                "display_text": "Department 2",
+                "children": [
+                    {
+                        "id" : 3,
+                        "node_type": "team",
+                        "display_text": "Team 1",
+                        "children" : [
+                            {
+                                "id" : 4,
+                                "node_type": "member",
+                                "display_text" : "Member 1"
+                            },
+                            {
+                                "id" : 5,
+                                "node_type": "member",
+                                "display_text" : "Member 2"
+                            },
+                            {
+                                "id" : 6,
+                                "node_type": "project",
+                                "display_text" : "Project 1",
+                                "children" : [
+                                    {
+                                        "id" : 13,
+                                        "node_type" : "project_member",
+                                        "display_text": "Member 1"
+                                    },
+                                    {
+                                        "id" : 14,
+                                        "node_type" : "project_member",
+                                        "display_text": "Member 2"
+                                    }
+                                ]
+                            },
+                            {
+                                "id" : 7,
+                                "node_type": "project",
+                                "display_text" : "Project 2",
+                                "children" : [
+                                    {
+                                        "id" : 15,
+                                        "node_type" : "project_member",
+                                        "display_text": "Member 1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id" : 8,
+                "node_type" : "department",
+                "display_text": "Department 2",
+                "children": [
+                    {
+                        "id" : 9,
+                        "node_type": "team",
+                        "display_text": "Team A",
+                        "children" : [
+                            {
+                                "id" : 10,
+                                "node_type": "member",
+                                "display_text" : "Member 3"
+                            },
+                            {
+                                "id" : 11,
+                                "node_type": "member",
+                                "display_text" : "Member 4"
+                            },
+                            {
+                                "id" : 12,
+                                "node_type": "project",
+                                "display_text" : "Project 3"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
