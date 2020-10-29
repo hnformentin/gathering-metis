@@ -28,6 +28,9 @@ There are many types of nodes that can be added to such a graph. Some ideas are:
 * No connection to other systems (AD, ...)
 * UI as outlined above
 
+## How we work
+To know more about how we work you can read [here](how_we_work.md).
+
 # SI Gathering Challenge: Template
 
 To run the project locally, you need docker:
