@@ -9,7 +9,7 @@ def seed_neo4j():
     psw = ""
 
     driver = GraphDatabase.driver(uri, auth=(usr, psw))
-    #q = "MATCH (p:Person) RETURN p"
+    # q = "MATCH (p:Person) RETURN p"
     clean_db = "MATCH (n) DETACH DELETE n"
     seed = """CREATE (d1:Department { name: "Department A"}),
                      (d2:Department { name: "Department B"}),
