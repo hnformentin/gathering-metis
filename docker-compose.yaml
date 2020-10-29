@@ -28,6 +28,10 @@ services:
     ports:
       - "8000:8000"
 
+volumes:
+  node-modules:
+    name: web_node-modules
+
 networks:
   radix:
     name: radix
