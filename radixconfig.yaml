@@ -16,7 +16,7 @@ spec:
       publicPort: http
     
     - name: server
-      src: "."
+      src: ./server
       ports:
        - name: http
          port: 8000
