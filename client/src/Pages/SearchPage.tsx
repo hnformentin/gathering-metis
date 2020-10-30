@@ -40,7 +40,7 @@ const SearchPage: React.FC = (): JSX.Element => {
             <div className={cx(styles.MainContainer, query !== '' ? styles.extended : '')}>
                 {query === '' && (
                     <Typography variant="h1">
-                        Search for
+                        Search for&nbsp;
                         <span className={styles.highlight} data-testid={`h1`}>
                             {highlight}
                         </span>
