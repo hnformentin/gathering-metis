@@ -52,4 +52,4 @@ spec:
 
   dnsAppAlias:
     environment: prod
-    component: server
+    component: client
