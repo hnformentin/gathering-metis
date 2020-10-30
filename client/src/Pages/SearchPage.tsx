@@ -42,7 +42,7 @@ const SearchPage: React.FC = () => {
                     <Typography variant="h1">
                         Search for
                         <span className={styles.highlight} data-testid={`h1`}>
-                            {highlight}
+                            &nbsp;{highlight}
                         </span>
                     </Typography>
                 )}
