@@ -11,7 +11,7 @@ interface Props {
     style?: { [key: string]: string };
 }
 
-const CircleBadge: React.FC<Props> = (props: Props): JSX.Element => {
+const CircleBadge: React.FC<Props> = (props: Props) => {
     Icon.add({ widgets, person, folder, star_outlined, group });
     return (
         <div className={styles.CircleBadge} style={props.style}>

@@ -8,7 +8,7 @@ interface Props {
     query: string;
 }
 
-const Results: React.FC<Props> = (props: Props): JSX.Element => {
+const Results: React.FC<Props> = (props: Props) => {
     useEffect(() => {
         console.log('New query', props.query);
     }, [props.query]);

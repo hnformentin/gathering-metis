@@ -5,7 +5,7 @@ import React from 'react';
 import { Typography } from '@equinor/eds-core-react';
 import styles from './Relations.module.scss';
 
-const Relations: React.FC = (): JSX.Element => {
+const Relations: React.FC = () => {
     return (
         <div className={styles.Relations}>
             <div className={styles.category}>

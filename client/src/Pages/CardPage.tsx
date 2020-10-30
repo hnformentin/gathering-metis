@@ -7,7 +7,7 @@ import SingleCard from 'Components/Block/SingleCard';
 import styles from './CardPage.module.scss';
 import { useParams } from 'react-router-dom';
 
-const CardPage: React.FC = (): JSX.Element => {
+const CardPage: React.FC = () => {
     const { query } = useParams<{ query: string }>();
 
     useEffect(() => {
