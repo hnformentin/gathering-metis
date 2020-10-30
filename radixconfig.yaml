@@ -33,7 +33,7 @@ spec:
           port: 7474
         - name: bolt
           port: 7687
-      publicPort: interface          
+      publicPort: bolt
       variables:
         NEO4J_ACCEPT_LICENSE_AGREEMENT: "yes"
       secrets:
