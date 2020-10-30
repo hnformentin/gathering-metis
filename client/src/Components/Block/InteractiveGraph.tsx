@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 
 import Neo4JD3 from 'neo4jd3';
 import { mockResults } from 'data/mock';
+import { sampleData } from 'data/sample';
 import styles from './InteractiveGraph.module.scss';
 
 let neo;
@@ -46,7 +47,7 @@ const InteractiveGraph: React.FC = (): JSX.Element => {
                 'Project|name|neo4jd3': 'https://eisman.github.io/neo4jd3/img/twemoji/31-20e3.svg',
                 User: 'https://eisman.github.io/neo4jd3/img/twemoji/1f600.svg',
             },
-            neo4jData: mockResults,
+            neo4jData: sampleData,
             onNodeClick: function (e, node): void {
                 console.log('Node', e, node);
                 // window.open('/card/' + node['id'], '_blank');
