@@ -1,28 +1,25 @@
-import { Container, Theme } from '@material-ui/core';
+import { Route, Router, Switch } from 'react-router';
+
+import CardPage from './Pages/CardPage';
 import React from 'react';
-import './App.css';
-import { Todos } from './Components/Todos';
-import { makeStyles } from "@material-ui/core/styles";
+import SearchPage from './Pages/SearchPage';
+import { createBrowserHistory } from 'history';
 
-const useStyles = makeStyles(({ spacing }: Theme) => ({
-  content: {
-    marginTop: spacing(2)
-  },
-  alert: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-}));
+const history = createBrowserHistory();
 
-function App() {
-  const classes = useStyles();
-
-  return (
-    <Container maxWidth="lg" className={classes.content}>
-      <Todos/>
-    </Container>
-  );
-}
+const App: React.FC = () => {
+    return (
+        <Router history={history}>
+            <Switch>
+                <Route exact path="/card/:query">
+                    <CardPage></CardPage>
+                </Route>
+                <Route path="/">
+                    <SearchPage></SearchPage>
+                </Route>
+            </Switch>
+        </Router>
+    );
+};
 
 export default App;

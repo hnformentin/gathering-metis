@@ -1,60 +1,66 @@
-import { Grid, Snackbar } from "@material-ui/core";
-import React, { useState, useEffect, useCallback } from "react";
-import useFetch from "use-http";
-import { TodoList } from "../../_types/models";
-import { FullPageSpinner } from "../FullPageSpinner";
-import { Alert } from "@material-ui/lab";
+import { Grid, Snackbar } from '@material-ui/core';
+import React, { useCallback, useEffect, useState } from 'react';
 
-export const Todos = () => {
-  const { get, response, loading } = useFetch({}, []);
-  const [todoList, setTodoList] = useState<TodoList>();
-  const [openError, setOpenError] = useState("");
+import { Alert } from '@material-ui/lab';
+import { FullPageSpinner } from '../View/FullPageSpinner';
+import { TodoList } from '../../_types/models';
+import useFetch from 'use-http';
 
-  const initializeTodos = useCallback(async () => {
-    const todoList = await get("/api/todos");
-    if (response.ok) setTodoList(todoList);
-    else setOpenError("Problems loading todos from database");
-  }, [response, get, setTodoList]);
+export const Todos: React.FC = () => {
+    const { get, response, loading } = useFetch({}, []);
+    const [todoList, setTodoList] = useState<TodoList>();
+    const [openError, setOpenError] = useState('');
 
-  useEffect(() => {
-    initializeTodos();
-  }, [initializeTodos]);
+    const initializeTodos = useCallback(async () => {
+        const todoList = await get('/api/todos');
+        if (response.ok) setTodoList(todoList);
+        else setOpenError('Problems loading todos from database');
+    }, [response, get, setTodoList]);
 
-  if (loading) {
-    return <FullPageSpinner />;
-  }
+    useEffect(() => {
+        initializeTodos();
+    }, [initializeTodos]);
 
-  const handleCloseError = (event?: React.SyntheticEvent, reason?: string) => {
-    if (reason === "clickaway") {
-      return;
+    if (loading) {
+        return <FullPageSpinner />;
     }
 
-    setOpenError("");
-  };
+    const handleCloseError = (reason?: string): void => {
+        if (reason !== 'clickaway') {
+            setOpenError('');
+        }
+    };
 
-  return (
-    <div>
-      <Grid container spacing={2}>
-        <Snackbar
-          open={openError !== ""}
-          onClose={handleCloseError}
-          autoHideDuration={10000}
-        >
-          <Alert onClose={handleCloseError} severity="error">
-            {openError}
-          </Alert>
-        </Snackbar>        
-        
-        {todoList && todoList?.todos.length > 0 && (
-          <Grid item xs={12}>
-            <div>
-              {todoList?.todos.map(todo => (
-                <div>{todo.description}</div>
-              ))}
-            </div>
-          </Grid>
-        )}
-      </Grid>
-    </div>
-  );
+    return (
+        <div>
+            <Grid container spacing={2}>
+                <Snackbar
+                    open={openError !== ''}
+                    onClose={(): void => {
+                        handleCloseError();
+                    }}
+                    autoHideDuration={10000}
+                >
+                    <Alert
+                        onClose={(): void => {
+                            handleCloseError();
+                        }}
+                        severity="error"
+                    >
+                        {openError}
+                    </Alert>
+                </Snackbar>
+
+                {todoList && todoList?.todos.length > 0 && (
+                    <Grid item xs={12}>
+                        <div>
+                            {todoList?.todos.map((todo, key) => (
+                                <div key={key}>{todo.description}</div>
+                            ))}
+                        </div>
+                    </Grid>
+                )}
+            </Grid>
+        </div>
+    );
 };

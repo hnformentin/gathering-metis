@@ -1,5 +1,5 @@
 export interface TodoList {
-    todos: Todo[]
+    todos: Todo[];
 }
 
 export interface Todo {

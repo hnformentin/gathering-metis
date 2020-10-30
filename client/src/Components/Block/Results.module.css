@@ -1,0 +1,11 @@
+.Results {
+  min-height: 350px;
+  background: #ffffff;
+  border: 1px solid #d6d6d6;
+  box-shadow: 4px 4px 10px #e4f0f0;
+  border-bottom-right-radius: 35px;
+  border-bottom-left-radius: 35px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
