@@ -457,7 +457,7 @@ const InteractiveGraph: React.FC = (): JSX.Element => {
                 ],
                 errors: [],
             },
-            onNodeDoubleClick: function (e, node): void {
+            onNodeClick: function (e, node): void {
                 console.log('Node', e, node);
                 // window.open('/card/' + node['id'], '_blank');
             },
