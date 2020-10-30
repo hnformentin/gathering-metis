@@ -1,0 +1,1 @@
+30/10/2020: Frontend: Added styled components
