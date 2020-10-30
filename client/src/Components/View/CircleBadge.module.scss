@@ -1,0 +1,41 @@
+.CircleBadge {
+    .circle {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin: 0 20px 0 0;
+        &.DEPARTMENT {
+            background-color: #ffe5c1;
+            svg {
+                color: #ab8249;
+            }
+        }
+        &.PERSON {
+            background-color: #e6faec;
+            svg {
+                color: #007079;
+            }
+        }
+        &.PROJECT {
+            background-color: #ffd3d3;
+            svg {
+                color: #da6a6a;
+            }
+        }
+        &.INTEREST {
+            background-color: #eeeeee;
+            svg {
+                color: #9f9f9f;
+            }
+        }
+        &.TEAM {
+            background-color: #d6ffd4;
+            svg {
+                color: #8dc78b;
+            }
+        }
+    }
+}
