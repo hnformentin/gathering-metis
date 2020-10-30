@@ -31,6 +31,9 @@ There are many types of nodes that can be added to such a graph. Some ideas are:
 ## How we work
 To know more about how we work you can read [here](how_we_work.md).
 
+## Backend technologies
+Explanation of how the backend is structured [here](backend.md).
+
 # SI Gathering Challenge: Template
 
 To run the project locally, you need docker:
