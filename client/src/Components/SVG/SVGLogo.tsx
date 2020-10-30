@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SVGLogo: React.FC = (): JSX.Element => {
+const SVGLogo: React.FC = () => {
     return (
         <svg width="42" height="48" viewBox="0 0 42 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path

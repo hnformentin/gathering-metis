@@ -14,7 +14,7 @@ interface Props {
     style?: { [key: string]: string };
 }
 
-const SearchResult: React.FC<Props> = (props: Props): JSX.Element => {
+const SearchResult: React.FC<Props> = (props: Props) => {
     Icon.add({ widgets, person, folder, star_outlined, group });
     return (
         <Link to={'/card/' + props.id}>

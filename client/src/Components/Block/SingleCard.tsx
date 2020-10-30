@@ -4,7 +4,7 @@ import React from 'react';
 import { Typography } from '@equinor/eds-core-react';
 import styles from './SingleCard.module.scss';
 
-const SingleCard: React.FC = (): JSX.Element => {
+const SingleCard: React.FC = () => {
     return (
         <div className={styles.SingleCard}>
             <div

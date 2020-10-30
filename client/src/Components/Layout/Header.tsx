@@ -3,7 +3,7 @@ import React from 'react';
 import SVGLogo from 'Components/SVG/SVGLogo';
 import styles from './Header.module.scss';
 
-const Header: React.FC = (): JSX.Element => {
+const Header: React.FC = () => {
     return (
         <Link to="/">
             <div className={styles.Header}>

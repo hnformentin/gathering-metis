@@ -9,7 +9,7 @@ import styles from './SearchPage.module.scss';
 
 const names = ['people', 'departments', 'projects', 'interests', 'technologies'];
 
-const SearchPage: React.FC = (): JSX.Element => {
+const SearchPage: React.FC = () => {
     const [highlight, setHighlight] = useState<string>('');
     const [query, setQuery] = useState<string>('');
 
