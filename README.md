@@ -39,3 +39,58 @@ To run the project locally, you need docker:
 docker build -t <name> .
 docker run -p 8000:8000 <name>
 ```
+
+# Onboarding Frontend
+
+## Install
+cd ./client
+npm install
+npm start
+
+## Code practicies
+
+### VSCode plugins for better code
+
+We use several extensions that helps keeping the code clean. Visual studio Code will give suggestions on which plugins should be installed with this project.
+
+We have enabled strict eslint rules, which will give errors/warnings if the code doesn't follow our standard guidlines. All these must be fixed before merge to dev.
+
+Must have plugins:
+* Code Spell Checker: https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
+* ESLint: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+* Prettier - Code formatter: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+* SonarLint: https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode
+
+Other usefull plugins:
+* GitHub Pull Requests and Issues: https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github
+* Import Cost: https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost
+* Azure App Service https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice
+* Docker: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+
+### Names
+* Use PascalCase for type names.
+* Do __not use "I"__ as a prefix for interface names.
+* Use PascalCase for enum values.
+* Use camelCase for function names.
+* Use camelCase for property names and local variables.
+* Do not use "_" as a prefix for private properties.
+* Use whole words in names when possible.
+
+### null and undefined
+Use __undefined__. Do not use null.
+
+### General Assumptions
+Consider objects like Nodes, Symbols, etc. as immutable outside the component that created them. Do not change them.
+Consider arrays as immutable by default after creation.
+
+### Classes
+For consistency, do not use classes in the core compiler pipeline. Use function closures instead.
+
+### General Constructs
+For a variety of reasons, we avoid certain constructs, and use some of our own. Among them:
+
+Do not use for..in statements; instead, use ts.forEach, ts.forEachKey and ts.forEachValue. Be aware of their slightly different semantics.
+Try to __use ts.forEach, ts.map, and ts.filter instead of loops__ when it is not strongly inconvenient.
+
+Based on:
+https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines#names
